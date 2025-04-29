@@ -3,7 +3,7 @@ body {
     color: #492C24;
     font-family: Montserrat;
     margin: 40px;
-    font-size: 42px
+    font-size: 32px
 
 }
 a {
@@ -27,4 +27,18 @@ a:hover {
 a:active {
     color: black;
     opacity: 0.3;
+}
+div.menu {
+    border: 2px solid #492C24;
+    border-radius: 10px;
+    width: 500px;
+    margin: 20px auto; 
+    padding: 10px;
+    background-color: #f7f2ec;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+div.menu:hover {
+    background-color: #f9edde;
+    border-color: #492C24;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
