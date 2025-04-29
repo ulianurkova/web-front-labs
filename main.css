@@ -6,3 +6,19 @@ body {
     font-size: 42px
 
 }
+a:link {
+    color: #492C24;
+    font-style: italic;
+}
+a:visited {
+    color: #aaa19f;
+    font-style: italic;
+}
+a:hover {
+    color: #492C24;
+    text-decoration: underline;
+}
+a:active {
+    color: black;
+    opacity: 0.3;
+}
