@@ -42,3 +42,8 @@ div.menu:hover {
     border-color: #492C24;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+.footer-ghost {
+    display: block;
+    height: 50px; /* Высота соответствует высоте подвала */
+}
