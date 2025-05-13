@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нуркова Ульяна Владиславовна. Комикс</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <style>
+       
+        main {
+            position: relative;
+            width: 600px; 
+            height: 400px; 
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%; 
+            height: 100%;
+            object-fit: contain; /* Чтобы картинка не обрезалась и сохраняла пропорции */
+            z-index: 0; 
+        }
+
+        .cloud {
+            position: absolute;
+            border-radius: 50%;
+            border: 1px solid #492C24;
+            background-color: white;
+            color: black;
+            padding: 10px;
+            box-shadow: 4px 3px 3px rgba(0, 0, 0, 0.2);
+            opacity: 0; 
+            transition: opacity 0.5s ;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        main:hover .cloud {
+            opacity: 1;
+        }
+
+        .position1 {
+            bottom: 225px;
+            left: 400px;
+            width: 8px;
+            height: 1px;
+            transition-delay: 0.2s;
+            z-index: 1;
+        }
+
+        .position2 {
+            bottom: 235px;
+            left: 415px;
+            width: 20px;
+            height: 5px;
+            transition-delay: 0.4s;
+            z-index: 2;
+        }
+
+        .position3 {
+            bottom: 245px;
+            left: 435px;
+            width: 35px;
+            height: 15px;
+            transition-delay: 0.6s;
+            z-index: 3;
+        }
+
+        .position4 {
+            bottom: 250px;
+            left: 450px;
+            width: 120px;
+            height: 60px;
+            transition-delay: 0.8s;
+            font-size: 20px;
+            text-align: center;
+            z-index: 4;
+        }
+
+    </style>
+</head>
+<body>
+    <header>НГТУ. ФБ. Лабораторная 4</header>
+    <main>
+        <img src="мем.jpg">
+        <div class="cloud position1"></div>
+        <div class="cloud position2"></div>
+        <div class="cloud position3"></div>
+        <div class="cloud position4">Сессия близко...</div>
+    </main>
+    <footer>
+        &copy; Нуркова Ульяна Владиславовна, ФБИ-31, 2 курс, 2025
+    </footer>
+</body>
+</html>
