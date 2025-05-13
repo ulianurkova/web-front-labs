@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нуркова Ульяна Владиславовна. Позиционирование</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png">
+    <link rel="icon" href="../favicon-16x16.png">
+    <style>
+        
+       div{
+        width: 300px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        background-color: white;
+        border: 1px dotted darkgreen;
+        margin: 15px;
+       }
+
+       .start{ 
+        position: relative;
+        z-index: 1;
+       }
+       
+       .position-relative {
+        position: relative;
+        left: 200px;
+        top: -130px;
+        z-index: 0;
+       }
+       .position-relative:hover {
+        position: relative;
+        z-index: 2;
+       }
+       .position-absolute{
+        position: absolute;
+        left: 300px;
+       
+
+       
+       }
+       .position-absolute:hover{
+        position: absolute;
+        width: 500px;
+        height: 100px;
+        background-color: #df2261;
+        color: #fffafb;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition:  1s 0.5s;
+        border-radius: 10px;
+       }
+
+    </style>
+</head>
+<body>
+    
+    <header>НГТУ. ФБ. Лабораторная 4</header>
+    <main>
+       <div class="start">static</div>
+       <div class="start">static</div>
+       <div class="position-relative">relative</div>
+       <div>static</div>
+       <div>static</div>
+       <div class="position-absolute">absolute</div>
+       <div>static</div>
+       <div>static</div>
+       <div>static</div>
+       <div>static</div>
+    </main>
+    <footer>
+        &copy; Нуркова Ульяна Владиславовна, ФБИ-31, 2 курс, 2025
+    </footer>
+</body>
+</html>
