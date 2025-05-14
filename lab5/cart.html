@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нуркова Ульяна Владиславовна. Корзина </title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="logo16.png">
+    <link rel="icon" href="logo32.png">
+    <script>
+        function showSum() {
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+            let inputC = document.getElementById('numberC');
+            let inputD = document.getElementById('numberD');
+            let inputE = document.getElementById('numberE');
+
+            let a1 = parseInt(inputA.value) || 0;
+            let a2 = 685;
+            let a = a1 * a2;
+
+            let b1 = parseInt(inputB.value) || 0;
+            let b2 = 540;
+            let b = b1 * b2;
+
+            let c1 = parseInt(inputC.value) || 0;
+            let c2 = 660;
+            let c = c1 * c2;
+
+            let d1 = parseInt(inputD.value) || 0;
+            let d2 = 710;
+            let d = d1 * d2;
+
+            let e1 = parseInt(inputE.value) || 0;
+            let e2 = 510;
+            let e = e1 * e2;
+
+            let sum = a + b + c + d + e;
+
+            let totalElement = document.getElementById('total');
+            if (!totalElement) {
+                totalElement = document.createElement('div');
+                totalElement.id = 'total';
+                document.querySelector('.cart').appendChild(totalElement);
+            }
+            totalElement.textContent = `Общая сумма к оплате: ${sum} рублей`;
+        }
+
+        function clearCart() {
+            document.getElementById('numberA').value = '';
+            document.getElementById('numberB').value = '';
+            document.getElementById('numberC').value = '';
+            document.getElementById('numberD').value = '';
+            document.getElementById('numberE').value = '';
+
+            let totalElement = document.getElementById('total');
+            if (totalElement) {
+                totalElement.remove();
+            }
+        }
+    </script>
+    <style>
+        .cart {
+            border: 1px solid #492C24;
+            border-radius: 20px;
+            padding: 10px;
+            width: 400px;
+            margin: 20px auto;
+            background-color: #c7ad8c;
+            text-align: center;
+        }
+
+        .cart label {
+            display: flex; /* Изменяем display на flex */
+            flex-direction: column; /* Располагаем элементы вертикально */
+            align-items: center; 
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .cart input[type="number"] {
+            width: 120px;
+            margin-left: 0; 
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        .cart h1 {
+            font-size: 30px;
+            margin: 0 auto 15px;
+            padding: 8px;
+            text-align: center;
+            width: 80%;
+        }
+
+        .cart input[type="button"] {
+            margin: 5px;
+            padding: 8px 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>НГТУ. ФБ. Лабораторная 5</header>
+    <main>
+        <div class="cart">
+            <h1>Корзинка с продуктами</h1>
+            <label>Ковурма-лагман с говядиной (685 руб.\ 300г.): <input type="number" placeholder="Кол-во" id="numberA" min="0"></label>
+            <label>Оджахури с грибами (540 руб. \ 350г.): <input type="number" placeholder="Кол-во" id="numberB" min="0"></label>
+            <label>Чахохбили (660 руб. \ 300г.): <input type="number" placeholder="Кол-во" id="numberC" min="0"></label>
+            <label>Чкмерули (710 руб. \ 350г.): <input type="number" placeholder="Кол-во" id="numberD" min="0"></label>
+            <label>Фисташковый рулет (510 руб. \ 150г.): <input type="number" placeholder="Кол-во" id="numberE" min="0"></label>
+            <div>
+            <input type="button" value="Рассчитать" onclick="showSum()">
+            <input type="button" value="Очистить" onclick="clearCart()">
+</div>
+        </div>
+    </main>
+    <footer>
+        &copy; Нуркова Ульяна Владиславовна, ФБИ-31, 2 курс, 2025
+    </footer>
+</body>
+</html>
