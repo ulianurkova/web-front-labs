@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нуркова Ульяна Владиславовна </title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="logo16.png">
+    <link rel="icon" href="logo32.png">
+    <script>
+        function showSum()
+        {
+            let inputA =document.getElementById('numberA');
+            let inputB=document.getElementById('numberB');
+            let a = parseInt(inputA.value);
+            let b=parseInt(inputB.value);
+            let result = a+b;
+            alert('Сумма '+ a +' и '+ b +' равна ' + result);
+        }
+        function showRazn(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a - b;
+            alert('Разность ' + a + ' и ' + b + ' равна ' + result);
+        }
+
+        function showUmn(){
+            let inputA = document.getElementById('numberA');
+            let inputB = document.getElementById('numberB');
+
+            let a = parseInt(inputA.value);
+            let b = parseInt(inputB.value);
+            let result = a * b;
+            alert('Произведение ' + a + ' и ' + b + ' равна ' + result);
+        }
+        function showDiv() {
+             let inputA = document.getElementById('numberA');
+             let inputB = document.getElementById('numberB');
+ 
+             let a = parseInt(inputA.value);
+             let b = parseInt(inputB.value);
+             
+             if(b == 0) {
+                alert('На ноль делить нельзя!');
+                inputB.focus();
+                inputB.select();
+                inputB.style.color = 'red';
+                inputB.style.borderColor = 'red';
+                return;
+             }
+
+             if(isNaN(a)) {
+                alert('Введите числовое значение в первое поле');
+                inputA.focus();
+                inputA.select();
+                inputA.style.color = 'red';
+                inputA.style.borderColor = 'red';
+                return;
+             }
+
+             if(isNaN(b)) {
+                alert('Введите числовое значение во второе поле');
+                inputB.focus();
+                inputB.select();
+                inputB.style.color = 'red';
+                inputB.style.borderColor = 'red';
+                return;
+             }
+
+             inputA.style.color = '';
+             inputA.style.borderColor = '';
+             
+             inputB.style.color = '';
+             inputB.style.borderColor = '';
+
+             let result = a / b;
+             alert(a + ' / ' + b + '= ' +  result); 
+         }
+         function showDegree() {
+             let inputA = document.getElementById('numberA');
+             let inputB = document.getElementById('numberB');
+ 
+             let a = parseInt(inputA.value);
+             let b = parseInt(inputB.value);
+             
+             if (a === 0 && b === 0) {
+                 alert("Оба значения не могут быть равны нулю");
+                 inputA.focus();
+                 inputA.select();
+                 inputA.style.color = "red";
+                 inputA.style.borderColor = "red";
+                 inputB.focus();
+                 inputB.select();
+                 inputB.style.color = "red";
+                 inputB.style.borderColor = "red";
+                 return;
+             }
+
+             if(isNaN(a)) {
+                alert('Введите числовое значение в первое поле');
+                inputA.focus();
+                inputA.select();
+                inputA.style.color = 'red';
+                inputA.style.borderColor = 'red';
+                return;
+             }
+
+             if(isNaN(b)) {
+                alert('Введите числовое значение во второе поле');
+                inputB.focus();
+                inputB.select();
+                inputB.style.color = 'red';
+                inputB.style.borderColor = 'red';
+                return;
+             }
+
+             inputA.style.color = '';
+             inputA.style.borderColor = '';
+             
+             inputB.style.color = '';
+             inputB.style.borderColor = '';
+
+             let result = Math.pow(a, b);
+             alert(a + ' в степени ' + b + ' = ' +  result);
+             }
+
+        function showAuthor(){
+            let author = 'Автор страницы: \n Нуркова Ульяна Владиславовна'
+            alert (author)
+        }
+        function showHi(){
+            alert (' Спасибо, что смотрите мою лабораторную')
+        }
+        function changeOutput(buttonNum, backColor, textColor, borderType, borderRad, boxWid, borderWid) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.borderStyle = borderType;
+            output.style.borderRadius = borderRad;
+            output.style.width = boxWid;
+            output.style.borderWidth = borderWid;
+        }
+    </script>
+    <style>
+     .message {
+        width: 250px;
+        height: 60px;
+        display: inline-block;
+        border: 2px solid #492C24;
+        background-color: #f7f2ec;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 0 10px #492C24;
+        cursor: pointer;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+     }
+    </style>
+</head>
+<body>
+    <header>НГТУ. ФБ. Лабораторная 5</header>
+    <main>
+        <label>Первое число: <input type="number" value="5154" id="numberA"><br></label>
+        <label>Второе число: <input type="number" value="7891" id="numberB"><br></label>
+        <div class="message" onclick="showSum()">Найти сумму чисел</div>
+        <div class="message" onclick="showRazn()">Найти разность чисел</div>
+        <div class="message" onclick="showUmn()">Найти произведение чисел</div>
+        <div class="message" onclick="showDiv()">Найти отношение чисел</div>
+        <div class="message" onclick="showDegree()">Возвести в степень</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
+        
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, '#663399', '#FFB6C1', 'solid', '5px', '300px', '2px')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, '#333333', '#FFD1DC', 'dotted', '10px', '250px', '3px')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'white', '#F06292', 'dashed', '15px', '350px', '4px')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, '#880E4F', '#FF80AB', 'double', '20px', '150px', '5px')">
+        </div>
+
+        <div id="output"></div>
+    </main>
+    <footer ondblclick="showHi()">
+        &copy; Нуркова Ульяна Владиславовна, ФБИ-31, 2 курс, 2025
+    </footer>
+</body>
+</html>
